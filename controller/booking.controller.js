@@ -14,7 +14,7 @@ module.exports.booking.Controller = {
 
     getBooking: async (req, res) =>{
         try{
-            const booking = await Booking.find()
+            const booking = await Booking.find()   
             return res.json(booking)
         }catch(error){
             console.log(error)

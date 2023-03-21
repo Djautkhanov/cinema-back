@@ -2,15 +2,16 @@
 const Movies = require('../Models/Movies.model')  
 
 
-module.exports.movies.Controller ={
+module.exports.moviesController ={
     addMovies: async(req, res) =>{
         try{
             const movies = await Movies.create({
                image: req.body.image,
                name: req.body.name,
                year: req.body.year,
-               genre:req.body.year,
-               director: req.body.director  
+               genre:req.body.genre,
+               director: req.body.director , 
+               description: req.body.description  
             })
             return res.json(movies)
         }  catch(error){
