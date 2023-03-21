@@ -1,12 +1,12 @@
 const mongoose = require('mongoose')
 
-const moviesSchema = mongoose.SchemaType({
+const moviesSchema = mongoose.Schema({  
     image: String,
     name: String,
-    year: String,
-    description: String,
+    year: Number,  
     genre: String,
     director: String,  
+    description: String,
 
 });
 
