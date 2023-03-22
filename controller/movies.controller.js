@@ -2,7 +2,7 @@
 const Movies = require('../Models/Movies.model')  
 
 
-module.exports.movies.Controller ={
+module.exports.moviesController ={
     addMovies: async(req, res) =>{
         try{
             const movies = await Movies.create({
@@ -23,7 +23,7 @@ module.exports.movies.Controller ={
             const movies = await Movies.find()
             return res.json(movies)
         }catch(error){
-            console.log(error)
+            res.json(error.message)
         }
     },
 
