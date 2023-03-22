@@ -1,7 +1,7 @@
-const mongoose =require('mongoose')
+const mongoose = require('mongoose')
 
-const bookingShema = mongoose.SchemaType({
-      
+const bookingShema = mongoose.Schema({
+
 })
 
 
