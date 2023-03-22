@@ -21,7 +21,7 @@ mongoose.connect(
         console.log("Сревер успешно запушен");
       });
     } catch (error) {
-      console.log(error);
+      console.log(error);  
     }
   }
 );
