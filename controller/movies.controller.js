@@ -24,7 +24,7 @@ module.exports.moviesController ={
             const movies = await Movies.find()  
             return res.json(movies)
         }catch(error){
-            console.log(error)
+            res.json(error.message)
         }
     },
 
