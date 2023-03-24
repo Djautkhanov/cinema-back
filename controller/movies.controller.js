@@ -21,7 +21,7 @@ module.exports.moviesController ={
 
     getMovies: async (req, res) =>{
         try{
-            const movies = await Movies.find()
+            const movies = await Movies.find()  
             return res.json(movies)
         }catch(error){
             res.json(error.message)

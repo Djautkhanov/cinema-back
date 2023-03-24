@@ -53,7 +53,7 @@ module.exports.userController = {
       const token = await jwt.sign(payload, process.env.SECRET_KEY, {
         expiresIn: "7d",
       });
-      res.json({ token });
+      res.json( token );
     } catch (error) {
       res.json(error.message);
     }
