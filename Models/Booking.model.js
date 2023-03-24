@@ -1,10 +1,10 @@
-const mongoose =require('mongoose')
+// const mongoose =require('mongoose')
 
-const bookingShema = mongoose.SchemaType({
+// const bookingShema = mongoose.SchemaType({
       
-})
+// })
 
 
-const Booking = mongoose.model('Booking', bookingShema)
+// const Booking = mongoose.model('Booking', bookingShema)
 
-module.exports = Booking   
+// module.exports = Booking   

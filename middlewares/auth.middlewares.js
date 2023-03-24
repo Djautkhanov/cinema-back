@@ -17,7 +17,7 @@ module.exports = async (req, res, next) => {
     req.user = await jwt.verify(token, process.env.SECRET_KEY);
     next();
   } catch (error) {
-    return res.json("dskmsdklfmsd");
+    return res.json("dskmsdklfmsd");  
   }
 };
 

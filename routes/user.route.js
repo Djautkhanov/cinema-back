@@ -7,4 +7,4 @@ router.delete('/user', userController.deleteUser )
 router.post('/login', userController.login )
 router.get('/user', userController.getUser )
 
-module.exports = router
+module.exports = router  
