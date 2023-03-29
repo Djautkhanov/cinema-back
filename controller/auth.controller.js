@@ -37,6 +37,7 @@ module.exports.userController = {
         }
     },
 
+<<<<<<< HEAD
     login: async (req, res) => {
         try {
             const candidate = await User.findOne({ login: req.body.login });
@@ -58,4 +59,27 @@ module.exports.userController = {
             res.json(error.message);
         }
     },
+=======
+  login: async (req, res) => {
+    try {
+      const candidate = await User.findOne({ login: req.body.login });
+      if (!candidate) {
+        return await res.status(401).json({ error: "неверный логин" });
+      }
+      const valid = await bcrypt.compare(req.body.password, candidate.password);
+      if (!valid) {
+        return await res.status(401).json({ error: "неверный пароль" });
+      }
+      const payload = {
+        id: candidate._id,
+      };
+      const token = await jwt.sign(payload, process.env.SECRET_KEY, {
+        expiresIn: "7d",
+      });
+      res.json( token );
+    } catch (error) {
+      res.json(error.message);
+    }
+  },
+>>>>>>> e827114e65c15b107a7fb0a329cd2d1fe090af72
 };

@@ -1,6 +1,6 @@
 const Booking = require('../Models/Booking.model')
 
-module.exports.booking.Controller = {
+module.exports.bookingController={
     addBooking: async (req, res) =>{
         try{
             const booking = await Booking.create({
