@@ -23,8 +23,8 @@ module.exports.moviesController = {
         try {
             const movies = await Movies.find()
             return res.json(movies)
-        } catch (error) {
-            console.log(error)
+        }catch(error){
+            res.json(error.message)
         }
     },
 
